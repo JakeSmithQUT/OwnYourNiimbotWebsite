@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="269" height="28" viewBox="0 0 269 28" role="img" aria-label="Made with love in Australia">
+  <title>Made with love in Australia</title>
+  <clipPath id="round"><rect width="269" height="28" rx="4"/></clipPath>
+  <g clip-path="url(#round)">
+    <rect width="137.80" height="28" fill="#333333"/>
+    <rect x="137.80" width="131.20" height="28" fill="#00843D"/>
+  </g>
+  <g font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10" font-weight="bold" text-rendering="geometricPrecision">
+    <text x="12.00" y="17.6" fill="#FFFFFF" textLength="75.80">MADE WITH</text>
+    <text x="110.80" y="17.6" fill="#FFFFFF" textLength="15.00">IN</text>
+    <text x="183.80" y="17.6" fill="#FFCD00" textLength="73.10">AUSTRALIA</text>
+  </g>
+  <g fill="#E4002B" transform="translate(99.30,14.47)"><path d="M0,4.56L-4.56,0L0,-4.56L4.56,0Z"/><circle cx="-2.28" cy="-2.28" r="3.22"/><circle cx="2.28" cy="-2.28" r="3.22"/></g>
+  <svg x="147.80" y="7" width="28" height="14" viewBox="0 0 10080 5040">
+    <rect width="10080" height="5040" fill="#012169"/>
+    <g transform="scale(84)">
+      <clipPath id="ujc"><path d="M0,0V30H60V0Z"/></clipPath>
+      <clipPath id="ujd"><path d="M30,15H60V30ZV30H0ZH0V0ZV0H60Z"/></clipPath>
+      <g clip-path="url(#ujc)">
+        <path d="M0,0L60,30M60,0L0,30" stroke="#FFFFFF" stroke-width="6"/>
+        <path d="M0,0L60,30M60,0L0,30" clip-path="url(#ujd)" stroke="#E4002B" stroke-width="4"/>
+        <path d="M30,0V30M0,15H60" stroke="#FFFFFF" stroke-width="10"/>
+        <path d="M30,0V30M0,15H60" stroke="#E4002B" stroke-width="6"/>
+      </g>
+    </g>
+    <g fill="#FFFFFF">
+      <polygon points="2520.0,3024.0 2665.8,3477.3 3111.1,3308.6 2847.6,3705.2 3257.0,3948.2 2782.7,3989.5 2848.0,4461.1 2520.0,4116.0 2192.0,4461.1 2257.3,3989.5 1783.0,3948.2 2192.4,3705.2 1928.9,3308.6 2374.2,3477.3"/>
+      <polygon points="7560.0,3840.0 7629.4,4055.8 7841.5,3975.5 7716.0,4164.4 7911.0,4280.1 7685.1,4299.8 7716.2,4524.3 7560.0,4360.0 7403.8,4524.3 7434.9,4299.8 7209.0,4280.1 7404.0,4164.4 7278.5,3975.5 7490.6,4055.8"/>
+      <polygon points="6300.0,1845.0 6369.4,2060.8 6581.5,1980.5 6456.0,2169.4 6651.0,2285.1 6425.1,2304.8 6456.2,2529.3 6300.0,2365.0 6143.8,2529.3 6174.9,2304.8 5949.0,2285.1 6144.0,2169.4 6018.5,1980.5 6230.6,2060.8"/>
+      <polygon points="7560.0,480.0 7629.4,695.8 7841.5,615.5 7716.0,804.4 7911.0,920.1 7685.1,939.8 7716.2,1164.3 7560.0,1000.0 7403.8,1164.3 7434.9,939.8 7209.0,920.1 7404.0,804.4 7278.5,615.5 7490.6,695.8"/>
+      <polygon points="8680.0,1509.0 8749.4,1724.8 8961.5,1644.5 8836.0,1833.4 9031.0,1949.1 8805.1,1968.8 8836.2,2193.3 8680.0,2029.0 8523.8,2193.3 8554.9,1968.8 8329.0,1949.1 8524.0,1833.4 8398.5,1644.5 8610.6,1724.8"/>
+      <polygon points="8064.0,2520.0 8118.9,2654.5 8263.7,2665.1 8152.8,2758.8 8187.4,2899.9 8064.0,2823.3 7940.6,2899.9 7975.2,2758.8 7864.3,2665.1 8009.1,2654.5"/>
+    </g>
+  </svg>
+</svg>

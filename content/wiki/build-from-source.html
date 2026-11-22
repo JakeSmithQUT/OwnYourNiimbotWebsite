@@ -1,0 +1,49 @@
+---
+title: Build from source
+description: Build OwnYourNiimbot from the source code with Node.js 22, run it in development mode, run the tests and build the installers.
+section: Reference
+order: 3
+---
+<p class="lead">The app is written in TypeScript with Electron, React, Vite and Fabric.js. You need Node.js 22 or later and Git.</p>
+
+<h2>Get the code and start the app</h2>
+<pre><code>git clone https://github.com/JakeSmithQUT/OwnYourNiimbot.git
+cd OwnYourNiimbot
+npm install
+npm run dev</code></pre>
+<p><code>npm run dev</code> starts the app with live reload.</p>
+
+<h2>Commands</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Command</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td><code>npm run dev</code></td><td>Starts the app with live reload</td></tr>
+<tr><td><code>npm test</code></td><td>Runs the tests, including full print jobs against a simulated printer</td></tr>
+<tr><td><code>npm run typecheck</code></td><td>Checks the TypeScript types</td></tr>
+<tr><td><code>npm run build</code></td><td>Builds the app into <code>dist/</code></td></tr>
+<tr><td><code>npm start</code></td><td>Opens the built app</td></tr>
+<tr><td><code>npm run dist:win</code>, <code>dist:mac</code>, <code>dist:linux</code></td><td>Builds the installers into <code>release/</code></td></tr>
+</tbody>
+</table></div>
+
+<h2>Project layout</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Folder</th><th>Contents</th></tr></thead>
+<tbody>
+<tr><td><code>src/main/</code></td><td>Electron main process: device pickers, permissions, file storage and updates</td></tr>
+<tr><td><code>src/printer/</code></td><td>Printer protocol, Bluetooth and serial connections, image encoding and the model table</td></tr>
+<tr><td><code>src/renderer/</code></td><td>React interface, label editor and template library</td></tr>
+<tr><td><code>src/main/mcp/</code></td><td>Local MCP server for AI assistants</td></tr>
+<tr><td><code>tests/</code></td><td>Vitest unit tests</td></tr>
+</tbody>
+</table></div>
+
+<h2>More information</h2>
+<ul>
+<li><a href="{%repo%}/blob/main/docs/development.md" rel="noopener">docs/development.md</a>: project layout, translations, templates, tests and the release procedure.</li>
+<li><a href="{%repo%}/blob/main/docs/protocol.md" rel="noopener">docs/protocol.md</a>: the NIIMBOT printer protocol.</li>
+<li><a href="{%repo%}/blob/main/docs/supported-printers.md" rel="noopener">docs/supported-printers.md</a>: the model table.</li>
+</ul>
+
+<h2>Contribute</h2>
+<p>Report bugs and ask for features in <a href="{%repo%}/issues" rel="noopener">GitHub issues</a>. Print results from printer models that are not tested yet help the most.</p>

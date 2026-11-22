@@ -1,0 +1,71 @@
+---
+title: Design view
+description: The parts of the OwnYourNiimbot design view: the Insert panel, the toolbar, the label, the status bar and the label settings.
+section: Design labels
+order: 1
+---
+<p class="lead">The design view is where you make a label. It has the Insert panel on the left, the toolbar and the label in the middle, and the settings of the label or the selected element on the right.</p>
+
+{%figure design | The design view with the Insert panel, the toolbar, an asset tag label and the label settings.%}
+
+<h2>Insert panel</h2>
+<p>The <strong>Insert</strong> panel adds a new element to the label:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Tool</th><th>Element</th><th>Wiki page</th></tr></thead>
+<tbody>
+<tr><td>Text</td><td>One or more lines of text</td><td><a href="/wiki/text-dates-and-serial-numbers/">Text, dates and serial numbers</a></td></tr>
+<tr><td>Barcode</td><td>A Code 128 barcode. Change the type in the right panel</td><td><a href="/wiki/barcodes-and-qr-codes/">Barcodes and 2D codes</a></td></tr>
+<tr><td>QR code</td><td>A QR code. Change it to Data Matrix, PDF417 or Aztec in the right panel</td><td><a href="/wiki/barcodes-and-qr-codes/">Barcodes and 2D codes</a></td></tr>
+<tr><td>Image</td><td>A picture from a file</td><td><a href="/wiki/images-and-photos/">Images and photos</a></td></tr>
+<tr><td>Date</td><td>The date or time when the label prints</td><td><a href="/wiki/text-dates-and-serial-numbers/#dates-and-times">Dates and times</a></td></tr>
+<tr><td>Serial</td><td>A number that counts up on each label</td><td><a href="/wiki/text-dates-and-serial-numbers/#serial-numbers">Serial numbers</a></td></tr>
+<tr><td>Table</td><td>Rows and columns of text cells</td><td><a href="/wiki/shapes-lines-and-tables/">Shapes, lines and tables</a></td></tr>
+<tr><td>Rectangle, Rounded, Circle</td><td>A shape with an outline, or filled black</td><td><a href="/wiki/shapes-lines-and-tables/">Shapes, lines and tables</a></td></tr>
+<tr><td>Line, Vertical</td><td>A horizontal or vertical line</td><td><a href="/wiki/shapes-lines-and-tables/">Shapes, lines and tables</a></td></tr>
+</tbody>
+</table></div>
+<p>The <strong>Symbols</strong> section under the tools adds a symbol. See <a href="/wiki/symbols/">Symbols</a>.</p>
+
+<h2>Toolbar</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Button</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td>Undo, Redo</td><td>Undo or redo the last change (<kbd>Ctrl</kbd> + <kbd>Z</kbd>, <kbd>Ctrl</kbd> + <kbd>Y</kbd>)</td></tr>
+<tr><td>Zoom out, Zoom in</td><td>Change the zoom. 100% is the real size on a 96 dpi screen</td></tr>
+<tr><td>Fit to window</td><td>Zoom so that the whole label fits</td></tr>
+<tr><td>Snap to grid</td><td>Move and resize elements in steps of the snap grid (0.5 mm by default)</td></tr>
+<tr><td>Show the print area</td><td>Shade the parts of the label that the print head cannot reach</td></tr>
+<tr><td>Align left, Centre horizontally, Align right</td><td>Align the selected elements across the label</td></tr>
+<tr><td>Align top, Centre vertically, Align bottom</td><td>Align the selected elements up and down the label</td></tr>
+<tr><td>Bring to front, Send to back</td><td>Put the selected element above or below the other elements</td></tr>
+<tr><td>Rotate 90°</td><td>Turn the selected element by a quarter turn</td></tr>
+<tr><td>Duplicate</td><td>Make a copy of the selected elements (<kbd>Ctrl</kbd> + <kbd>D</kbd>)</td></tr>
+<tr><td>Lock, Unlock</td><td>Stop or allow changes to the selected element</td></tr>
+<tr><td>Delete</td><td>Delete the selected elements (<kbd>Del</kbd>)</td></tr>
+</tbody>
+</table></div>
+
+<h2>Label settings</h2>
+<p>When no element is selected, the right panel shows the settings of the label:</p>
+<ul>
+<li><strong>NIIMBOT roll</strong>: the rolls for the printer model. Select a roll to set the width, the height and the label type.</li>
+<li><strong>Width</strong> and <strong>Height</strong>: the label size in millimetres.</li>
+<li><strong>Label type</strong>: gap (die-cut), black mark, continuous, transparent and the other types that the model supports.</li>
+<li><strong>Corner radius (preview only)</strong>: the rounded corners of the label in the editor. It does not change the print.</li>
+<li><strong>Snap grid</strong>: the step for moving and resizing.</li>
+</ul>
+<p>If the roll in the printer has a different size from the label, a banner above the label offers <strong>Use W × H mm</strong> and <strong>Keep this size</strong>.</p>
+
+<h2>Element settings</h2>
+<p>Select an element to show its settings. Each element has a <strong>Position</strong> section with X, Y, width and height in millimetres, and rotation in steps of 90°. Select more than one element to align them with the toolbar.</p>
+
+<h2>Status bar</h2>
+<p>The bar under the label shows the printer model, its resolution and the width of the print head, for example "B1 · 203 dpi · print head 48 mm". On some models the label prints sideways, and the editor shows "Printed sideways on this model" under the label.</p>
+
+<h2>Mouse and keyboard</h2>
+<ul>
+<li>Right-click an element for the element menu.</li>
+<li>Hold <kbd>Ctrl</kbd> and scroll to zoom.</li>
+<li>Arrow keys move the selected elements by 0.5 mm. Hold <kbd>Shift</kbd> to move by 5 mm.</li>
+</ul>
+<p>See <a href="/wiki/keyboard-shortcuts/">Keyboard shortcuts</a> for the full list.</p>

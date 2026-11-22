@@ -1,0 +1,32 @@
+---
+title: Install on Windows
+description: Install OwnYourNiimbot on Windows 10 or 11, get past the SmartScreen warning, use the portable version, and remove the app.
+section: Install and set up
+order: 1
+---
+<p class="lead">OwnYourNiimbot runs on Windows 10 and 11, on Intel, AMD and Arm processors. The installer has no questions and installs the app for your user only, so it does not need administrator rights.</p>
+
+<h2>Install the app</h2>
+<ol class="steps">
+<li>Download the installer: <a href="{%dl windows-x64%}">{%file windows-x64%}</a> ({%size windows-x64%}). For a Windows on Arm computer, download the <a href="/download/#windows">Arm64 installer</a>.</li>
+<li>Open the file. If SmartScreen shows "Windows protected your PC", click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+<li>The installer adds a desktop shortcut and a Start menu shortcut, then opens the app.</li>
+</ol>
+
+<div class="note">
+<p>Windows shows the SmartScreen warning because the app is not code signed. Download the app only from this site or from the <a href="{%releases-url%}" rel="noopener">GitHub releases page</a>. To check the file, compare its SHA-256 checksum with the value on the <a href="/download/#windows">download page</a>:</p>
+</div>
+<pre><code>Get-FileHash .\{%file windows-x64%} -Algorithm SHA256</code></pre>
+
+<h2>Portable version</h2>
+<p>The portable version, <code>{%file windows-portable%}</code>, runs without installation. Put it in a folder and open it. It does not install updates itself: when a new version is available, it shows a link to the release page.</p>
+<p>The portable version runs from a temporary folder, so Claude Desktop cannot start its MCP bridge. To use Claude Desktop with the app, use the installer.</p>
+
+<h2>Updates</h2>
+<p>The installed app checks for a new version when it starts and every 6 hours. It downloads the update and installs it when the app restarts. See <a href="/wiki/updates/">Updates</a>.</p>
+
+<h2>Remove the app</h2>
+<p>Open <strong>Settings</strong>, <strong>Apps</strong>, <strong>Installed apps</strong> in Windows, find OwnYourNiimbot and click <strong>Uninstall</strong>. Labels and settings are in the app data folder, <code>%APPDATA%\OwnYourNiimbot</code>. Delete that folder too if you do not want to keep them.</p>
+
+<h2>Next step</h2>
+<p><a href="/wiki/connect-a-printer/">Connect a printer</a>.</p>

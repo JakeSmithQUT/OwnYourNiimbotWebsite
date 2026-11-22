@@ -1,0 +1,61 @@
+---
+title: Data fields
+description: Reference for OwnYourNiimbot data fields: spreadsheet columns, the date, the time, the label number with leading zeros and custom date formats.
+section: Data and batch printing
+order: 2
+---
+<p class="lead">A data field is a name in double braces, for example <code>{{Name}}</code>. When the label prints, the app replaces the field with a value. Fields work in text, barcodes, QR codes and table cells.</p>
+
+<h2>Spreadsheet columns</h2>
+<p>A field with the name of a column gets the value of that column for each row. The name does not depend on upper and lower case, so <code>{{name}}</code> and <code>{{Name}}</code> are the same. Load the data on the <strong>Data</strong> page. See <a href="/wiki/batch-printing/">Batch printing</a>.</p>
+<p>When data is loaded and a field has no matching column, the field prints as an empty value. When no data is loaded, the field prints as it is written.</p>
+
+<h2>Built-in fields</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Field</th><th>Value</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>{{date}}</code></td><td>The date when the label prints, DD/MM/YYYY</td><td>22/11/2026</td></tr>
+<tr><td><code>{{time}}</code></td><td>The time when the label prints, HH:mm</td><td>14:05</td></tr>
+<tr><td><code>{{datetime}}</code></td><td>Date and time, DD/MM/YYYY HH:mm</td><td>22/11/2026 14:05</td></tr>
+<tr><td><code>{{index}}</code></td><td>The number of the label in the print job, from 1</td><td>7</td></tr>
+<tr><td><code>{{index:4}}</code></td><td>The label number with leading zeros to the given number of digits</td><td>0007</td></tr>
+<tr><td><code>{{date:FORMAT}}</code></td><td>The date in your own format</td><td><code>{{date:D MMM YYYY}}</code> gives 22 Nov 2026</td></tr>
+</tbody>
+</table></div>
+<p>A column with the same name as a built-in field takes priority. For example, a column called <code>Date</code> replaces <code>{{date}}</code>.</p>
+
+<h2>Date format letters</h2>
+<p>Use these letters in <code>{{date:FORMAT}}</code> and in the date format of a Date element:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Letters</th><th>Value</th><th>Example</th></tr></thead>
+<tbody>
+<tr><td><code>YYYY</code></td><td>Year</td><td>2026</td></tr>
+<tr><td><code>YY</code></td><td>Year, two digits</td><td>26</td></tr>
+<tr><td><code>MMM</code></td><td>Month name, short (English)</td><td>Nov</td></tr>
+<tr><td><code>MM</code></td><td>Month, two digits</td><td>11</td></tr>
+<tr><td><code>M</code></td><td>Month</td><td>11</td></tr>
+<tr><td><code>DD</code></td><td>Day, two digits</td><td>07</td></tr>
+<tr><td><code>D</code></td><td>Day</td><td>7</td></tr>
+<tr><td><code>ddd</code></td><td>Day name, short (English)</td><td>Sat</td></tr>
+<tr><td><code>HH</code></td><td>Hour, 24-hour clock, two digits</td><td>14</td></tr>
+<tr><td><code>H</code></td><td>Hour, 24-hour clock</td><td>14</td></tr>
+<tr><td><code>hh</code></td><td>Hour, 12-hour clock, two digits</td><td>02</td></tr>
+<tr><td><code>h</code></td><td>Hour, 12-hour clock</td><td>2</td></tr>
+<tr><td><code>mm</code></td><td>Minutes</td><td>05</td></tr>
+<tr><td><code>ss</code></td><td>Seconds</td><td>09</td></tr>
+<tr><td><code>A</code></td><td>AM or PM</td><td>PM</td></tr>
+</tbody>
+</table></div>
+<p>Other characters print as they are, for example the <code>/</code>, <code>-</code>, <code>.</code> and spaces.</p>
+
+<h2>Examples</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Content</th><th>Result</th></tr></thead>
+<tbody>
+<tr><td><code>Room {{Room}}</code></td><td>Room 2.14</td></tr>
+<tr><td><code>ORD-{{index:6}}</code> in a barcode</td><td>ORD-000001, ORD-000002 and so on</td></tr>
+<tr><td><code>Packed {{date:DD.MM.YY}}</code></td><td>Packed 22.11.26</td></tr>
+<tr><td><code>https://example.com/asset/{{Asset}}</code> in a QR code</td><td>A link for each asset</td></tr>
+</tbody>
+</table></div>
+<p>For a best-before date that adds days, use a Date element and set <strong>Add days</strong>. See <a href="/wiki/text-dates-and-serial-numbers/#dates-and-times">Dates and times</a>.</p>

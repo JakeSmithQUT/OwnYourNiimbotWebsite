@@ -1,0 +1,36 @@
+---
+title: Privacy and the data folder
+description: OwnYourNiimbot has no account, no analytics and no cloud service. Where it stores labels and settings on Windows, macOS and Linux, and how to back them up.
+section: App and settings
+order: 5
+---
+<p class="lead">The app has no account, no analytics and no cloud service. Labels, print history and settings stay on your computer.</p>
+
+<h2>Internet connections</h2>
+<p>The update check is the only internet connection of the app. It asks GitHub for the latest release, and GitHub gets the app version and the IP address of the computer. The app sends no labels or other data. To turn the check off, go to <strong>Settings</strong>, <strong>Updates</strong>.</p>
+<p>The MCP server for AI assistants is off by default. When you turn it on, it accepts connections from this computer only.</p>
+
+<h2>Data folder</h2>
+<p>Click <strong>Settings</strong>, <strong>Open data folder</strong> to open it. The folder is in these places:</p>
+<div class="table-wrap"><table>
+<thead><tr><th>System</th><th>Folder</th></tr></thead>
+<tbody>
+<tr><td>Windows</td><td><code>%APPDATA%\OwnYourNiimbot</code></td></tr>
+<tr><td>macOS</td><td><code>~/Library/Application Support/OwnYourNiimbot</code></td></tr>
+<tr><td>Linux</td><td><code>~/.config/OwnYourNiimbot</code></td></tr>
+</tbody>
+</table></div>
+<p>The folder holds your saved labels, the print history, the settings, the sizes that you saved for rolls, the update settings and the MCP token.</p>
+
+<h2>Back up and move labels</h2>
+<ul>
+<li>To back up everything, close the app and copy the data folder.</li>
+<li>To move everything to another computer, close the app on both computers and copy the folder to the same place on the other computer.</li>
+<li>To share one label, export it as a label file from the <strong>Labels</strong> page. See <a href="/wiki/saved-labels/">Saved labels and label files</a>.</li>
+</ul>
+
+<h2>Bluetooth and USB</h2>
+<p>The app connects only to the printer that you select. It asks before it pairs with a Bluetooth device, and NIIMBOT printers do not need pairing.</p>
+
+<h2>Open source</h2>
+<p>The <a href="{%repo%}" rel="noopener">source code</a> is public under the MIT licence, so anyone can check what the app does. The repository contains no code, images, fonts, templates or translations from the official NIIMBOT app.</p>

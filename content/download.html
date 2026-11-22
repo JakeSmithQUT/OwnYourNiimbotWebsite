@@ -1,0 +1,38 @@
+---
+title: Download OwnYourNiimbot for Windows, macOS and Linux
+heading: Download OwnYourNiimbot
+titleTag: Download for Windows, macOS and Linux
+description: Download OwnYourNiimbot {%version%}, the free label designer for NIIMBOT printers. Installers for Windows, macOS and Linux on x64 and Arm, with SHA-256 checksums.
+crumb: Download
+---
+<p class="lead">Version {%version%}, released {%date%}. The app is free and open source. Each button downloads the file directly from the <a href="{%release-url%}" rel="noopener">GitHub release</a>.</p>
+
+<div class="note">
+<p>The app is not code signed, so Windows and macOS show a warning the first time that you open it. The install pages for each system tell you what to click. Download the app only from this site or from the <a href="{%releases-url%}" rel="noopener">GitHub releases page</a>.</p>
+</div>
+
+{%download-cards%}
+
+<h2>Check the download</h2>
+<p>Each release has a <a href="{%sums-url%}" rel="noopener">SHA-256 checksum file</a>. The checksums on this page come from that file. To check a file, calculate its checksum and compare it with the value above.</p>
+<p>Windows, in PowerShell:</p>
+<pre><code>Get-FileHash .\{%file windows-x64%} -Algorithm SHA256</code></pre>
+<p>macOS, in Terminal:</p>
+<pre><code>shasum -a 256 ~/Downloads/{%file macos-arm64%}</code></pre>
+<p>Linux:</p>
+<pre><code>sha256sum ~/Downloads/{%file linux-x64-appimage%}</code></pre>
+
+<h2>Short download links</h2>
+<p>These links always go to the file of the latest release. Use them in documentation or a message.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>System</th><th>Link</th></tr></thead>
+<tbody>
+<tr><td>Windows installer, x64</td><td><code>https://ownyourniimbot.com/dl/windows</code></td></tr>
+<tr><td>macOS, Apple silicon</td><td><code>https://ownyourniimbot.com/dl/macos</code></td></tr>
+<tr><td>Linux AppImage, x64</td><td><code>https://ownyourniimbot.com/dl/linux</code></td></tr>
+</tbody>
+</table></div>
+
+<h2>Other files on GitHub</h2>
+<p>The <a href="{%release-url%}" rel="noopener">release page on GitHub</a> also has macOS .zip files, a Windows installer that holds both x64 and Arm64, and the update files that the app reads. The <a href="{%releases-url%}" rel="noopener">releases list</a> has every earlier version and its release notes.</p>
+<p>To build the app from the source code, see <a href="/wiki/build-from-source/">Build from source</a>.</p>

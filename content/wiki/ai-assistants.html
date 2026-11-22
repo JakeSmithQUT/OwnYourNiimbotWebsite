@@ -1,0 +1,50 @@
+---
+title: AI assistants (MCP)
+description: Let Claude Code, Claude Desktop or another MCP client make, preview and print NIIMBOT labels through the local OwnYourNiimbot MCP server.
+section: App and settings
+order: 4
+---
+<p class="lead">An AI assistant on the same computer can make labels, look at a preview and print through the Model Context Protocol (MCP). The server is off by default. It accepts connections from this computer only and needs a token.</p>
+
+<h2>Turn on the server</h2>
+<ol class="steps">
+<li>Go to <strong>Settings</strong>, <strong>AI assistants (MCP)</strong>.</li>
+<li>Select <strong>Allow AI assistants to use OwnYourNiimbot</strong>. The section shows "Running on port 47821", the address and the token.</li>
+<li>Copy the setup for your assistant from the same section.</li>
+</ol>
+
+<h2>Claude Code</h2>
+<p>Copy the <strong>Claude Code command</strong> and run it once in a terminal: PowerShell, Command Prompt, or Terminal on macOS and Linux. Then start a new Claude Code session.</p>
+
+<h2>Claude Desktop</h2>
+<p>Copy the JSON from <strong>Claude Desktop (claude_desktop_config.json)</strong>, add it to <code>claude_desktop_config.json</code>, then restart Claude Desktop. Claude Desktop starts a small bridge program that comes with the app, so it needs the installed app. The portable Windows version runs from a temporary folder and does not work with Claude Desktop.</p>
+
+<h2>Other MCP clients</h2>
+<p>Use the address <code>http://127.0.0.1:47821/mcp</code> with the header <code>Authorization: Bearer &lt;token&gt;</code>. If port 47821 is in use, the app tries the next nine ports, and the section shows the port that it uses.</p>
+
+<h2>Assistant tools</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Tool</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td><code>get_status</code></td><td>Shows the connected printer, the loaded roll, the open label, the included fonts and the barcode types</td></tr>
+<tr><td><code>list_label_sizes</code></td><td>Lists the NIIMBOT rolls that fit the printer</td></tr>
+<tr><td><code>list_templates</code></td><td>Searches the template library</td></tr>
+<tr><td><code>create_label</code></td><td>Makes a label from text, codes and other elements</td></tr>
+<tr><td><code>create_from_template</code></td><td>Makes a label from a template at one of its sizes, with the sample text replaced</td></tr>
+<tr><td><code>edit_label_text</code></td><td>Makes a copy of a label with text replaced</td></tr>
+<tr><td><code>preview_label</code></td><td>Returns an image of the label as the printer prints it, with the parts outside the print area in grey</td></tr>
+<tr><td><code>list_saved_labels</code></td><td>Lists your saved labels</td></tr>
+<tr><td><code>save_label</code></td><td>Saves a label to your labels</td></tr>
+<tr><td><code>print_label</code></td><td>Prints a label</td></tr>
+</tbody>
+</table></div>
+<p>Example request: "Make a label for each of switch ports 1 to 8 on the loaded roll and show me a preview."</p>
+
+<h2>Print approval</h2>
+<p><strong>Ask me before an assistant prints</strong> is on by default. Before each print job from an assistant, the app shows the label name, the size, the number of labels and the printer, and waits for you to click <strong>Print</strong>.</p>
+
+<h2>Token</h2>
+<p>The token is stored in the app data folder. Click <strong>Make a new token</strong> if you think that someone else has it, then update the token in your assistant.</p>
+
+<h2>Reconnect after an update</h2>
+<p>Reconnect the assistant after the app updates. In Claude Code, run <code>/mcp</code>.</p>

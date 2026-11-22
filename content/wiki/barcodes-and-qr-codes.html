@@ -1,0 +1,66 @@
+---
+title: Barcodes and 2D codes
+description: Print Code 128, EAN-13, UPC-A, GS1-128, QR codes, Data Matrix, PDF417 and Aztec codes on a NIIMBOT label printer with OwnYourNiimbot.
+section: Design labels
+order: 3
+---
+<p class="lead">OwnYourNiimbot makes 12 types of barcode and 4 types of 2D code. A barcode or code can hold fixed text, a spreadsheet column or a number that changes on each label.</p>
+
+<div class="split">
+<div>
+<h2>Add a barcode</h2>
+<ol class="steps">
+<li>Click <strong>Barcode</strong> or <strong>QR code</strong> in the Insert panel.</li>
+<li>In the right panel, select the <strong>Type</strong>.</li>
+<li>Type the value in <strong>Content</strong>.</li>
+<li>Drag a corner of the code to resize it.</li>
+</ol>
+<p>If the value is not valid for the type, the code shows "Invalid value". For example, EAN-13 accepts digits only.</p>
+</div>
+{%figure barcode-panel | The barcode settings: type, content, data field, the text under the bars and the text size. | | narrow%}
+</div>
+
+<h2>Barcode types</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Type</th><th>Example value</th><th>Common use</th></tr></thead>
+<tbody>
+<tr><td>Code 128</td><td><code>ABC-12345</code></td><td>Asset tags, inventory, general use. Letters, digits and symbols</td></tr>
+<tr><td>Code 39</td><td><code>ABC123</code></td><td>Older inventory and industrial systems</td></tr>
+<tr><td>Code 93</td><td><code>ABC123</code></td><td>Logistics</td></tr>
+<tr><td>EAN-13</td><td><code>590123412345</code></td><td>Retail products outside North America</td></tr>
+<tr><td>EAN-8</td><td><code>9638507</code></td><td>Small retail products</td></tr>
+<tr><td>UPC-A</td><td><code>01234567890</code></td><td>Retail products in North America</td></tr>
+<tr><td>UPC-E</td><td><code>0123456</code></td><td>Small retail products in North America</td></tr>
+<tr><td>ITF-14</td><td><code>0461234567890</code></td><td>Cartons and outer packaging</td></tr>
+<tr><td>Interleaved 2 of 5</td><td><code>12345678</code></td><td>Warehouse and distribution. Digits only</td></tr>
+<tr><td>Codabar</td><td><code>A12345B</code></td><td>Libraries and blood banks</td></tr>
+<tr><td>GS1-128</td><td><code>(01)09521234543213(3103)000123</code></td><td>Shipping labels with GS1 application identifiers</td></tr>
+<tr><td>MSI Plessey</td><td><code>1234567</code></td><td>Shelf labels</td></tr>
+</tbody>
+</table></div>
+<p>The EAN and UPC examples leave out the check digit. The barcode library adds it.</p>
+<p>Select <strong>Show text under the bars</strong> to print the value under the barcode, and set its <strong>Text size</strong>.</p>
+
+<h2>2D code types</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Type</th><th>Common use</th></tr></thead>
+<tbody>
+<tr><td>QR code</td><td>Web addresses, Wi-Fi details, contact details, asset links</td></tr>
+<tr><td>Data Matrix</td><td>Small parts and electronics. Stays readable at a very small size</td></tr>
+<tr><td>PDF417</td><td>Identity cards and transport documents</td></tr>
+<tr><td>Aztec</td><td>Tickets and boarding passes</td></tr>
+</tbody>
+</table></div>
+<p>A QR code has an <strong>Error correction</strong> setting: L, M (default), Q or H. A higher level keeps the code readable when part of it is damaged, but makes the code denser.</p>
+
+<h2>Values from a spreadsheet</h2>
+<p>Select <strong>Insert a data field</strong> under <strong>Content</strong> to put a spreadsheet column in the code, for example <code>{{Asset}}</code>. Each label of a batch gets the value of its row. You can mix fields and text, for example <code>https://example.com/asset/{{Asset}}</code>. See <a href="/wiki/batch-printing/">Batch printing</a>.</p>
+<p>For numbers that count up, use <code>{{index}}</code> or <code>{{index:6}}</code>, which gives the label number with leading zeros, for example <code>ORD-{{index:6}}</code>. See <a href="/wiki/data-fields/">Data fields</a>.</p>
+
+<h2>Print size and scanning</h2>
+<ul>
+<li>The print preview shows the code at the printer resolution. Check that thin bars do not merge.</li>
+<li>On a 12 mm or 15 mm roll, use a short value or a Data Matrix code.</li>
+<li>Leave a blank margin around the code so that a scanner can find it.</li>
+<li>If a scanner cannot read the code, make it larger or increase the print density.</li>
+</ul>

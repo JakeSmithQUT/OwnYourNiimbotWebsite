@@ -1,0 +1,34 @@
+---
+title: Supported NIIMBOT printers
+titleTag: Supported NIIMBOT printers: D11, D110, B1, B21 and more
+description: The {%printer-count%} NIIMBOT label printers that OwnYourNiimbot supports on Windows, macOS and Linux, with resolution, print width, density, label types and command set.
+crumb: Printers
+wide: true
+---
+<p class="lead">OwnYourNiimbot works with {%printer-count%} NIIMBOT models that use the NIIMBOT command set. When a printer connects, the app reads its model ID and selects the command set, the resolution and the print width.</p>
+
+<h2>Printer pages</h2>
+<p>These pages show the label sizes and the setup steps for the most common models.</p>
+{%printer-links%}
+
+<h2>Models with the NIIMBOT command set</h2>
+<p>The last column shows the command set that the app selects. To use a different command set, change <strong>Settings</strong>, <strong>Command set</strong>, or open <strong>Advanced</strong> in the print dialog. Leave it on <strong>Auto</strong> unless a printer does not print with the automatic choice.</p>
+{%printers-table%}
+
+<h2>Models with a different command set</h2>
+<p>The official app lists these models, but they use a command set from a different manufacturer. OwnYourNiimbot does not support them. The B3 is a different printer from the B3S.</p>
+{%printers-other%}
+
+<h2>Command sets</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Command set</th><th>Printers</th></tr></thead>
+<tbody>
+<tr><td>Legacy (D11, B21, B3S)</td><td>Older D11, B21 and B3S firmware</td></tr>
+<tr><td>D110 family</td><td>D110, B21S, B18 and similar</td></tr>
+<tr><td>Modern (B1 and newer)</td><td>B1, B2, B31, B32, K3, M2, M3, P1 and newer models</td></tr>
+</tbody>
+</table></div>
+
+<h2>Hardware test status</h2>
+<p>The print commands are tested against a simulated printer in the app's test suite. If you print with a model, <a href="{%repo%}/issues" rel="noopener">open an issue on GitHub</a> with the model name, the firmware version and the result. If the print fails, attach the communication log from the <strong>Printer</strong> page.</p>
+<p>If the printer reports a model ID that is not in the list, the Printer page shows the ID. Select the nearest model in <strong>Settings</strong> and try each command set in the print dialog.</p>

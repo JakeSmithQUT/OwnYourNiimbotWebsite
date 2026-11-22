@@ -1,0 +1,33 @@
+---
+title: Label size detection
+description: How OwnYourNiimbot finds the size of the NIIMBOT roll in the printer, and how to save the size of a roll that it does not know.
+section: Printing
+order: 2
+---
+<p class="lead">When a printer connects, and when you close the cover after you change the roll, the app finds the size of the loaded roll. A new, empty label changes to that size.</p>
+
+<h2>Label size sources</h2>
+<p>The app tries these sources in order:</p>
+<ol>
+<li><strong>Read from the printer</strong>: newer printer firmware reports the label size.</li>
+<li><strong>Saved for this roll</strong>: a size that you saved for the barcode of the roll.</li>
+<li><strong>From the label list</strong>: the list of NIIMBOT rolls in the app, matched by the roll barcode.</li>
+</ol>
+<p>Genuine NIIMBOT rolls have an RFID tag with the roll barcode, the serial number and the number of labels. The app reads the tag through the printer.</p>
+
+<h2>Save the size of an unknown roll</h2>
+<p>If the app cannot find the size, the right panel of the design view shows "The loaded roll has no known size".</p>
+<ol class="steps">
+<li>Select the size in the <strong>NIIMBOT roll</strong> list, or enter the width and height.</li>
+<li>Click <strong>Save W × H mm for this roll</strong>.</li>
+</ol>
+<p>The app uses the saved size each time it detects that roll.</p>
+
+<h2>A label with a different size</h2>
+<p>If you open a label with a different size from the roll in the printer, a banner above the label shows both sizes. Click <strong>Use W × H mm</strong> to change the label to the roll size, or <strong>Keep this size</strong>.</p>
+
+<h2>Turn off the automatic size</h2>
+<p>Clear <strong>Settings</strong>, <strong>Give a new, empty label the size of the roll in the printer</strong>.</p>
+
+<h2>Roll details on the Printer page</h2>
+<p>The <strong>Printer</strong> page shows the roll size and where it came from, the barcode, the roll serial, the labels on the roll, the labels used and the labels left. <strong>Detect the roll again</strong> reads the roll again. <strong>Forget the saved size</strong> deletes a size that you saved for the roll. See <a href="/wiki/printer-page/">Printer page</a>.</p>

@@ -1,0 +1,37 @@
+---
+title: Printer page
+description: The OwnYourNiimbot Printer page: printer details, battery and cover status, the loaded roll, auto power off, sounds, label position calibration and the communication log.
+section: Printing
+order: 3
+---
+<p class="lead">Click <strong>Printer</strong> in the side bar, or click the printer at the top of the window. With no printer connected, the page has a <strong>Connect</strong> button and the list of supported models.</p>
+
+{%figure printer | The Printer page with no printer connected and the list of supported models.%}
+
+<h2>Device</h2>
+<p>The model, the model ID that the printer reports, the firmware and hardware versions, the serial number, the Bluetooth address, the connection, the resolution, the print width, the density and the command set.</p>
+<p>If the printer reports a model ID that is not in the model list, the page shows the ID. Select the nearest model in <strong>Settings</strong> and try each command set in the print dialog. Open an issue on GitHub with the ID so that the model can be added.</p>
+
+<h2>Status</h2>
+<p>The battery level, whether the cover is open, whether labels are loaded, whether the label tag was read, and the time of the last update. Click <strong>Refresh</strong> to read the details again.</p>
+
+<h2>Label roll</h2>
+<p>The size of the loaded roll (width × length) and where the size came from, the gap between labels, and the label type. For a genuine roll with an RFID tag, the page also shows the barcode, the roll serial, the labels on the roll, the labels used and the labels left.</p>
+<ul>
+<li><strong>Detect the roll again</strong>: reads the roll again, for example after you change it.</li>
+<li><strong>Forget the saved size</strong>: deletes the size that you saved for this roll.</li>
+</ul>
+<p>Some printer firmware does not report the label size. Then select the size once in the design view and save it for the roll. See <a href="/wiki/label-size-detection/">Label size detection</a>.</p>
+
+<h2>Settings</h2>
+<ul>
+<li><strong>Turn off when idle after</strong>: 15, 30, 45 or 60 minutes.</li>
+<li><strong>Sounds</strong>: turn the connection sound and the power sound on or off.</li>
+<li><strong>Label position calibration</strong>: click <strong>Calibrate</strong>. The printer feeds a few labels to find the gap or the mark between labels. Do this if labels print in the wrong position.</li>
+</ul>
+
+<h2>Communication log</h2>
+<p>The log shows the packets that go to and from the printer. If a model does not print correctly, attach the log to a bug report on GitHub.</p>
+
+<h2>Disconnect</h2>
+<p>Click <strong>Disconnect</strong> to close the connection, for example to use the phone app.</p>

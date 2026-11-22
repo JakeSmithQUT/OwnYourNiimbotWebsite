@@ -1,0 +1,28 @@
+---
+title: Updates
+description: How OwnYourNiimbot checks GitHub for new versions, installs updates on Windows and Linux, and shows a link on macOS. How to turn the check off.
+section: App and settings
+order: 3
+---
+<p class="lead">The installed app checks the <a href="{%releases-url%}" rel="noopener">GitHub releases</a> of the project when it starts and every 6 hours while it is open. The latest version is {%version%}, released {%date%}.</p>
+
+<h2>Windows installer and Linux AppImage</h2>
+<p>These versions install updates themselves.</p>
+<ul>
+<li>When the app starts and an update is available, a small window shows the download. The installer then shows its progress, and the app opens again with a <strong>What's new</strong> link.</li>
+<li>Click <strong>Start without updating</strong> to use the app while the update downloads. When it is ready, a <strong>Restart to update</strong> button shows at the top of the window.</li>
+<li>If the open label has changes that are not saved, the app offers <strong>Save and restart</strong>.</li>
+</ul>
+<p>The app checks the download before it installs it.</p>
+
+<h2>macOS, Windows portable and the .deb package</h2>
+<p>These versions cannot install updates themselves. When a new version is available, a bar shows a link to the release page. Download the new version from the <a href="/download/">download page</a> and install it over the old one.</p>
+
+<h2>Turn off the update check</h2>
+<p>Go to <strong>Settings</strong>, <strong>Updates</strong>, and clear <strong>Check for updates automatically</strong>. Click <strong>Check now</strong> to check by hand.</p>
+
+<h2>Data that the check sends</h2>
+<p>The app asks GitHub for the latest release. GitHub gets the app version and the IP address of the computer. The app sends no labels or other data.</p>
+
+<h2>Reconnect AI assistants after an update</h2>
+<p>If you use the MCP server, reconnect the assistant after an update. In Claude Code, run <code>/mcp</code>.</p>

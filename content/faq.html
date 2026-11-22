@@ -1,0 +1,98 @@
+---
+title: NIIMBOT software questions and answers
+titleTag: NIIMBOT software for PC and Mac: questions and answers
+heading: Questions and answers
+description: Answers about NIIMBOT label printer software for Windows, Mac and Linux: supported printers, Bluetooth and USB, accounts, drivers, spreadsheets, privacy and updates.
+crumb: Questions and answers
+---
+<p class="lead">Common questions about OwnYourNiimbot and about NIIMBOT label printers on a computer. The <a href="/wiki/">wiki</a> has the full instructions.</p>
+
+<section class="faq-item">
+<h2>Is there NIIMBOT label software for Windows?</h2>
+<p>Yes. OwnYourNiimbot is a free label designer for NIIMBOT printers that runs on Windows 10 and 11, on x64 and Arm processors. It connects to the printer over Bluetooth or a USB cable. <a href="/download/#windows">Download it for Windows</a>.</p>
+</section>
+
+<section class="faq-item">
+<h2>Can I use a NIIMBOT printer with a Mac?</h2>
+<p>Yes. OwnYourNiimbot has macOS versions for Apple silicon and Intel Macs. Allow Bluetooth access when macOS asks for it. <a href="/wiki/install-macos/">Install on macOS</a> tells you how to open an app that is not code signed.</p>
+</section>
+
+<section class="faq-item">
+<h2>Does it work on Linux?</h2>
+<p>Yes. There is an AppImage and a .deb package for x64 and Arm64. Bluetooth needs BlueZ 5.41 or later. For a USB cable, add your user to the <code>dialout</code> group. See <a href="/wiki/install-linux/">Install on Linux</a>.</p>
+</section>
+
+<section class="faq-item">
+<h2>Which NIIMBOT printers does it support?</h2>
+<p>{%printer-count%} models that use the NIIMBOT command set, including the D11, D110, D101, H1S, B1, B18, B21, B3S, B31, K3, M2 and M3 series. The <a href="/printers/">supported printers</a> page lists each model with its resolution, print width and label types. {%other-count%} models in the official app list, for example the B3, use a command set from a different manufacturer and do not work.</p>
+</section>
+
+<section class="faq-item">
+<h2>Do I need a NIIMBOT account or the phone app?</h2>
+<p>No. OwnYourNiimbot has no account and no sign-in, and it does not use the NIIMBOT cloud. Close the phone app before you connect, because the printer accepts one connection at a time.</p>
+</section>
+
+<section class="faq-item">
+<h2>Is OwnYourNiimbot made by NIIMBOT?</h2>
+<p>No. OwnYourNiimbot is an independent open-source project. NIIMBOT did not make, approve or support it. It contains no code, images, fonts, templates or translations from the official app.</p>
+</section>
+
+<section class="faq-item">
+<h2>Is it free?</h2>
+<p>Yes. The app is free, has no advertising and no subscription, and its source code is on <a href="{%repo%}" rel="noopener">GitHub</a> under the MIT licence.</p>
+</section>
+
+<section class="faq-item">
+<h2>Do I need to install a printer driver?</h2>
+<p>No. The app talks to the printer directly over Bluetooth or a serial port. The printer does not show as a system printer, so other programs cannot print to it through OwnYourNiimbot. To print a design from another program, save it as an image and insert the image on a label.</p>
+</section>
+
+<section class="faq-item">
+<h2>Do I need to pair the printer in the Bluetooth settings?</h2>
+<p>No. Turn on the printer, click <strong>Connect printer</strong> in the app and select the printer. If Windows or macOS asks to pair, the printer does not need it. See <a href="/wiki/connect-a-printer/">Connect a printer</a>.</p>
+</section>
+
+<section class="faq-item">
+<h2>Can I print labels from Excel or a CSV file?</h2>
+<p>Yes. Open an .xlsx, .csv or .tsv file on the Data page, or paste a table. Put columns on the label as fields, for example <code>{{Name}}</code>, and the app prints one label for each row. See <a href="/wiki/batch-printing/">Batch printing from a spreadsheet</a>.</p>
+</section>
+
+<section class="faq-item">
+<h2>Does it work with rolls that are not genuine NIIMBOT rolls?</h2>
+<p>The app prints on any roll that the printer accepts. If the app cannot read the roll size, select the size in the <strong>NIIMBOT roll</strong> list or enter the width and height, then save the size for that roll. The number of labels left shows only for genuine rolls with an RFID tag.</p>
+</section>
+
+<section class="faq-item">
+<h2>Why does Windows say that it protected my PC?</h2>
+<p>The app is not code signed, so Windows SmartScreen shows "Windows protected your PC" the first time. Click <strong>More info</strong>, then <strong>Run anyway</strong>. Download the app only from this site or from the GitHub releases page, and compare the SHA-256 checksum if you want to check the file.</p>
+</section>
+
+<section class="faq-item">
+<h2>Does the app send my labels anywhere?</h2>
+<p>No. The app has no analytics and no cloud service. Its only internet connection is the update check, which asks GitHub for the latest release. You can turn the check off in <strong>Settings</strong>. See <a href="/wiki/privacy-and-data/">Privacy and the data folder</a>.</p>
+</section>
+
+<section class="faq-item">
+<h2>How do I update the app?</h2>
+<p>The installed app checks for a new version when it starts and every 6 hours. On Windows and with the Linux AppImage, it downloads and installs the update. On macOS, with the portable Windows app and with the .deb package, it shows a link to the new release. See <a href="/wiki/updates/">Updates</a>.</p>
+</section>
+
+<section class="faq-item">
+<h2>Can an AI assistant make labels with it?</h2>
+<p>Yes. Turn on the local MCP server in <strong>Settings</strong>, <strong>AI assistants (MCP)</strong>. An assistant such as Claude can then make labels, preview them and print them. By default the app asks you before an assistant prints. See <a href="/wiki/ai-assistants/">AI assistants (MCP)</a>.</p>
+</section>
+
+<section class="faq-item">
+<h2>Which languages does the app have?</h2>
+<p>22: English, Bulgarian, Chinese (Simplified and Traditional), Croatian, Czech, French, German, Hindi, Hungarian, Italian, Japanese, Korean, Marathi, Polish, Portuguese (Brazil), Russian, Spanish, Swedish, Turkish, Ukrainian and Vietnamese. Templates and symbol names stay in English.</p>
+</section>
+
+<section class="faq-item">
+<h2>Is it for Nimmbot or Niimbot printers?</h2>
+<p>NIIMBOT is the brand name, and people also spell it Niimbot or Nimmbot. OwnYourNiimbot works with the NIIMBOT label printers in the <a href="/printers/">supported printers</a> list.</p>
+</section>
+
+<section class="faq-item">
+<h2>Where do I report a problem or ask for a feature?</h2>
+<p>Open an <a href="{%repo%}/issues" rel="noopener">issue on GitHub</a>. If a printer does not print correctly, add the model name, the firmware version and the communication log from the <strong>Printer</strong> page.</p>
+</section>

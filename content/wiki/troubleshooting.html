@@ -1,0 +1,84 @@
+---
+title: Troubleshooting
+description: Fix common problems with OwnYourNiimbot and NIIMBOT printers: the printer is not found, Bluetooth errors, wrong label size, faint print, cut-off print and printer error messages.
+section: Reference
+order: 2
+---
+<p class="lead">Find the problem or the message, then do the steps. If the problem stays, <a href="{%repo%}/issues" rel="noopener">open an issue on GitHub</a> with the printer model, the firmware version and the communication log from the <strong>Printer</strong> page.</p>
+
+<h2>Install and start</h2>
+<h3>Windows says "Windows protected your PC"</h3>
+<p>The app is not code signed. Click <strong>More info</strong>, then <strong>Run anyway</strong>. See <a href="/wiki/install-windows/">Install on Windows</a>.</p>
+<h3>macOS says that the app cannot be opened or is damaged</h3>
+<p>Right-click the app and click <strong>Open</strong>. On macOS 15 and later, use <strong>System Settings</strong>, <strong>Privacy &amp; Security</strong>, <strong>Open Anyway</strong>. If macOS says that the app is damaged, run <code>xattr -dr com.apple.quarantine /Applications/OwnYourNiimbot.app</code> in Terminal. See <a href="/wiki/install-macos/">Install on macOS</a>.</p>
+<h3>The Linux AppImage does not start</h3>
+<p>Make the file executable with <code>chmod +x</code>. If it reports that FUSE is missing, install <code>libfuse2</code> (<code>libfuse2t64</code> on Ubuntu 24.04 and later). Start it from a terminal to see the error message, and add the message to an issue.</p>
+
+<h2>Connection</h2>
+<h3>The printer is not in the Bluetooth list</h3>
+<ol>
+<li>Make sure that the printer is on and charged.</li>
+<li>Close the NIIMBOT phone app, or turn off Bluetooth on the phone. The printer accepts one connection at a time.</li>
+<li>Click <strong>Show all Bluetooth devices</strong> in the connect dialog.</li>
+<li>Turn the printer off and on, then try again.</li>
+</ol>
+<h3>"Bluetooth is not available on this computer"</h3>
+<p>Turn on Bluetooth in the system settings. On macOS, give the app Bluetooth access in <strong>System Settings</strong>, <strong>Privacy &amp; Security</strong>, <strong>Bluetooth</strong>. On Linux, Bluetooth needs BlueZ 5.41 or later.</p>
+<h3>"The printer service was not found"</h3>
+<p>The selected device is not a NIIMBOT printer, or it is a model with a different command set. Check the <a href="/printers/">supported printers</a>.</p>
+<h3>No serial ports show for a USB cable</h3>
+<p>Use a USB data cable. Some cables carry power only. On Linux, add your user to the <code>dialout</code> group (<code>uucp</code> on Arch) and log in again.</p>
+<h3>"The printer did not accept the data"</h3>
+<p>Disconnect the printer on the <strong>Printer</strong> page and connect it again. If the message comes back, turn the printer off and on.</p>
+
+<h2>Label size and position</h2>
+<h3>The label size is wrong or unknown</h3>
+<p>Select the size in the <strong>NIIMBOT roll</strong> list or enter the width and height, then click <strong>Save W × H mm for this roll</strong>. See <a href="/wiki/label-size-detection/">Label size detection</a>.</p>
+<h3>Labels print in the wrong position or across two labels</h3>
+<ul>
+<li>Make sure that the <strong>Label type</strong> matches the roll: gap (die-cut), black mark or continuous.</li>
+<li>On the <strong>Printer</strong> page, click <strong>Calibrate</strong>. The printer feeds a few labels to find the gap or the mark.</li>
+<li>Check that the label size matches the roll. The print dialog shows a warning if it does not.</li>
+</ul>
+<h3>Part of the label does not print</h3>
+<p>The print head is narrower than the label. The editor shades the parts that do not print. Click <strong>Fit into the print area</strong> in the right panel. See <a href="/wiki/print-area/">Print area</a>.</p>
+<h3>The print is upside down</h3>
+<p>Open <strong>Advanced</strong> in the print dialog and select <strong>Turn the print 180°</strong>, or select <strong>Turn every print 180°</strong> in <strong>Settings</strong>.</p>
+
+<h2>Print quality</h2>
+<h3>The print is too light</h3>
+<ul>
+<li>Increase the print density in the print dialog.</li>
+<li>Increase <strong>Settings</strong>, <strong>Black level</strong> to make grey and thin content print black.</li>
+<li>Use a bolder font or thicker lines.</li>
+</ul>
+<h3>A photo prints as a black or grey area</h3>
+<p>Select the image and set <strong>Black and white</strong> to <strong>Dither (photos)</strong>. Change the brightness and the contrast, and check the result in the print preview. See <a href="/wiki/images-and-photos/">Images and photos</a>.</p>
+<h3>A scanner cannot read the barcode</h3>
+<p>Make the barcode larger, leave a blank margin around it, and increase the print density. On narrow rolls, use a Data Matrix code. See <a href="/wiki/barcodes-and-qr-codes/">Barcodes and 2D codes</a>.</p>
+
+<h2>Printer messages</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Message</th><th>Action</th></tr></thead>
+<tbody>
+<tr><td>The cover is open</td><td>Close the cover</td></tr>
+<tr><td>No labels are loaded</td><td>Load a roll and close the cover</td></tr>
+<tr><td>The battery is low</td><td>Charge the printer</td></tr>
+<tr><td>The print head is too hot</td><td>Wait for the printer to cool, then print again</td></tr>
+<tr><td>The printer is busy</td><td>Wait for the current job to finish</td></tr>
+<tr><td>This label type is not supported</td><td>Select a label type that the model supports</td></tr>
+<tr><td>No label size is set</td><td>Set the label size, then print again</td></tr>
+<tr><td>A print job is already in progress</td><td>Wait for the current job to finish</td></tr>
+<tr><td>One print job can have up to 10,000 labels</td><td>Print fewer copies, or print the data in parts with From and To</td></tr>
+</tbody>
+</table></div>
+
+<h2>Unknown model ID</h2>
+<p>The Printer page can show that the printer reported a model ID that is not in the list. Then select the nearest model in <strong>Settings</strong> and try each command set in the print dialog. Open an issue with the model ID so that the model can be added.</p>
+
+<h2>AI assistant cannot connect</h2>
+<ul>
+<li>Make sure that <strong>Allow AI assistants to use OwnYourNiimbot</strong> is on and that the app is open.</li>
+<li>After an app update, reconnect the assistant. In Claude Code, run <code>/mcp</code>.</li>
+<li>If you made a new token, update it in the assistant.</li>
+</ul>

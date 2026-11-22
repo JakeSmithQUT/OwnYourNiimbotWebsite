@@ -1,0 +1,18 @@
+{
+  "name": "ownyourniimbot-website",
+  "version": "1.0.0",
+  "description": "Website for OwnYourNiimbot, the free label designer for NIIMBOT printers",
+  "author": "Jake Smith",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "build:offline": "node build.mjs --offline",
+    "serve": "node serve.mjs",
+    "check": "node check.mjs"
+  }
+}

@@ -1,0 +1,20 @@
+---
+title: Print area
+description: Why part of a NIIMBOT label does not print when the print head is narrower than the roll, and how OwnYourNiimbot shows and fixes it.
+section: Design labels
+order: 7
+---
+<p class="lead">On some printers and rolls the print head is narrower than the label. For example, the H1S prints 12 mm across a 15 mm roll, and the B1 prints 48 mm across a 50 mm roll. Content outside the print head width is cut off.</p>
+
+<h2>Shaded parts of the label</h2>
+<p>The editor shades the parts of the label that the print head cannot reach. The print preview shows the same parts in grey. <strong>Show the print area</strong> in the toolbar turns the shading on and off.</p>
+<p>The app takes the print head width from the printer model. When no printer is connected, it uses the model in <strong>Settings</strong>, <strong>Printer model when no printer is connected</strong>.</p>
+
+<h2>Fit the design into the print area</h2>
+<p>If an element goes outside the print area, the right panel shows a warning, for example "1 element goes outside the print area and will be cut off". Click <strong>Fit into the print area</strong>. The app moves and shrinks the whole design so that it fits.</p>
+
+<h2>Templates and the print area</h2>
+<p>The <a href="/wiki/templates/">template library</a> checks each size against the print head of your printer. A size that is too wide for the model is shown, but marked "Too wide for the model".</p>
+
+<h2>Labels that print sideways</h2>
+<p>On some models the label goes through the printer sideways, so the print head runs along the length of the label. The editor shows "Printed sideways on this model" under the label. You design the label the normal way round, and the app turns it for the printer.</p>

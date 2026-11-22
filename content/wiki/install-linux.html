@@ -1,0 +1,40 @@
+---
+title: Install on Linux
+description: Install OwnYourNiimbot on Linux with the AppImage or the .deb package, set up Bluetooth with BlueZ, and give your user access to USB serial ports.
+section: Install and set up
+order: 3
+---
+<p class="lead">OwnYourNiimbot for Linux comes as an AppImage, which runs on most distributions, and as a .deb package for Debian, Ubuntu and similar systems. Both are available for x64 and Arm64.</p>
+
+<h2>AppImage</h2>
+<ol class="steps">
+<li>Download the AppImage: <a href="{%dl linux-x64-appimage%}">x64</a> ({%size linux-x64-appimage%}) or <a href="/download/#linux">Arm64</a>.</li>
+<li>Make the file executable and start it:</li>
+</ol>
+<pre><code>chmod +x ~/Downloads/OwnYourNiimbot-*.AppImage
+~/Downloads/OwnYourNiimbot-*.AppImage</code></pre>
+<p>The AppImage installs updates itself. If it reports that FUSE is missing, install the <code>libfuse2</code> package (<code>libfuse2t64</code> on Ubuntu 24.04 and later).</p>
+
+<h2>Debian and Ubuntu package</h2>
+<p>Download the <a href="{%dl linux-x64-deb%}">x64 package</a> or the <a href="/download/#linux">Arm64 package</a>, then install it with apt:</p>
+<pre><code>sudo apt install ./{%file linux-x64-deb%}</code></pre>
+<p>The .deb package does not install updates itself. When a new version is available, the app shows a link to the release page.</p>
+
+<h2>Bluetooth</h2>
+<p>Bluetooth needs BlueZ 5.41 or later. Most current distributions have a newer version. Make sure that Bluetooth is on in the system settings. You do not need to pair the printer.</p>
+
+<h2>USB cable</h2>
+<p>To use a USB cable, your user needs access to serial ports. Add your user to the <code>dialout</code> group, then log out and log in again:</p>
+<pre><code>sudo usermod -aG dialout $USER</code></pre>
+<p>On Arch Linux and related systems the group is <code>uucp</code>:</p>
+<pre><code>sudo usermod -aG uucp $USER</code></pre>
+
+<h2>Check the download</h2>
+<p>Compare the checksum with the value on the <a href="/download/#linux">download page</a>:</p>
+<pre><code>sha256sum ~/Downloads/{%file linux-x64-appimage%}</code></pre>
+
+<h2>Data folder</h2>
+<p>Labels and settings are in <code>~/.config/OwnYourNiimbot</code>.</p>
+
+<h2>Next step</h2>
+<p><a href="/wiki/connect-a-printer/">Connect a printer</a>.</p>

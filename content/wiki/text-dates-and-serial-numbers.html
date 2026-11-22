@@ -1,0 +1,51 @@
+---
+title: Text, dates and serial numbers
+description: Add text to a NIIMBOT label in OwnYourNiimbot, choose a font, and add dates, best-before dates and serial numbers that change on each label.
+section: Design labels
+order: 2
+---
+<p class="lead">Text, Date and Serial elements all put text on the label. A Date element shows the date when the label prints. A Serial element counts up on each label.</p>
+
+<h2>Text</h2>
+<p>Click <strong>Text</strong> in the Insert panel. Double-click the text on the label to edit it there, or change it in the <strong>Text</strong> box on the right.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Font</td><td>A font that is included with the app, or a font on this computer</td></tr>
+<tr><td>Size</td><td>The text size</td></tr>
+<tr><td>Line spacing</td><td>The space between lines</td></tr>
+<tr><td>Style</td><td>Bold, italic, underline and strikethrough</td></tr>
+<tr><td>Alignment</td><td>Left, centre, right or justify</td></tr>
+<tr><td>Letter spacing</td><td>The space between letters</td></tr>
+<tr><td>White text on black</td><td>Prints the text white on a black background</td></tr>
+<tr><td>Insert a data field</td><td>Adds a spreadsheet column or a built-in value. See <a href="/wiki/data-fields/">Data fields</a></td></tr>
+</tbody>
+</table></div>
+
+<h2>Included fonts</h2>
+<p>The app includes 19 fonts, so a label looks the same on every computer: Inter, Montserrat, Oswald, Bebas Neue, Archivo Black, Playfair Display, Abril Fatface, Cinzel, Roboto Slab, Pacifico, Great Vibes, Dancing Script, Caveat, Permanent Marker, Amatic SC, Fredoka, Righteous, Space Mono and JetBrains Mono.</p>
+<p>The font list also shows the fonts on this computer. A label with a system font looks different on a computer that does not have that font.</p>
+<div class="note"><p>Thermal printers print in black only. Small text prints more clearly in a bold, simple font such as Inter or Montserrat. Check small text in the print preview, which shows the label at the printer resolution.</p></div>
+
+<h2>Dates and times</h2>
+<p>Click <strong>Date</strong> in the Insert panel. The element shows the date and time when the label prints.</p>
+<ul>
+<li><strong>Date format</strong>: DD/MM/YYYY, D MMM YYYY, YYYY-MM-DD, MM/DD/YYYY, DD.MM.YYYY, ddd D MMM, HH:mm, DD/MM/YYYY HH:mm or YYYY-MM-DD HH:mm:ss.</li>
+<li><strong>Add days</strong>: adds a number of days to the date. Use it for best-before, use-by or expiry dates. For example, 3 days on 22 November prints 25 November.</li>
+</ul>
+<p>The format letters are listed on the <a href="/wiki/data-fields/#date-format-letters">Data fields</a> page.</p>
+
+<h2>Serial numbers</h2>
+<p>Click <strong>Serial</strong> in the Insert panel. The number goes up on each label of a print job.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Prefix</td><td>Text before the number, for example <code>A-</code></td></tr>
+<tr><td>Suffix</td><td>Text after the number</td></tr>
+<tr><td>Start</td><td>The number on the first label</td></tr>
+<tr><td>Step</td><td>The amount added for each label</td></tr>
+<tr><td>Digits</td><td>The minimum number of digits. The app adds leading zeros, for example 0007. From 1 to 12</td></tr>
+</tbody>
+</table></div>
+<p>The panel shows an example of the first three numbers, for example "A-0001, A-0002, A-0003".</p>
+<p>In the print dialog, <strong>Number of serial labels</strong> sets how many numbered labels to print. To put the label number in a text or a barcode, use the <code>{{index}}</code> field. See <a href="/wiki/data-fields/">Data fields</a>.</p>

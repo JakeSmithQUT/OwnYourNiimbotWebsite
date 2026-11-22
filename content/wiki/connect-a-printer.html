@@ -1,0 +1,45 @@
+---
+title: Connect a printer
+description: Connect a NIIMBOT label printer to OwnYourNiimbot over Bluetooth or a USB cable, without pairing and without the phone app.
+section: Install and set up
+order: 4
+---
+<p class="lead">The app connects to the printer directly over Bluetooth or a USB cable. You do not pair the printer in the system settings and you do not install a driver.</p>
+
+{%figure connect-dialog | The Connect a printer dialog with the Bluetooth and the USB cable or serial port options. | | medium%}
+
+<h2>Connect over Bluetooth</h2>
+<ol class="steps">
+<li>Turn on the printer. If the NIIMBOT phone app is connected to it, close the phone app first. The printer accepts one connection at a time.</li>
+<li>Click <strong>Connect printer</strong> at the top of the window.</li>
+<li>Click <strong>Bluetooth</strong>. The app looks for printers nearby.</li>
+<li>Select the printer. Its name starts with the model, for example <code>D110-</code>.</li>
+</ol>
+<p>The app connects and reads the printer details: the model, the firmware, the battery level and the loaded roll. The top bar shows the model and the battery level.</p>
+<p>If the printer is not in the list, click <strong>Show all Bluetooth devices</strong>. Make sure that the printer is on and that no phone is connected to it.</p>
+
+<h2>Connect with a USB cable</h2>
+<ol class="steps">
+<li>Connect the printer with a USB data cable and turn it on. Some cables carry power only and do not work.</li>
+<li>Click <strong>Connect printer</strong>, then <strong>USB cable or serial port</strong>.</li>
+<li>Select the serial port of the printer.</li>
+</ol>
+<p>Older models that pair as a Bluetooth serial port also show in this list. On Linux, your user must be in the <code>dialout</code> group. See <a href="/wiki/install-linux/#usb-cable">Install on Linux</a>.</p>
+
+<h2>Pairing requests</h2>
+<p>NIIMBOT printers do not need pairing. If a Bluetooth device asks to pair with the computer while the app looks for printers, the app shows the request and its PIN. Click <strong>Pair</strong> only if you expect the request.</p>
+
+<h2>Last printer</h2>
+<p>The app remembers the last printer and sets <strong>Settings</strong>, <strong>Printer model when no printer is connected</strong> to that model. The label size and the print area stay correct after a restart and when the printer is off.</p>
+
+<h2>Disconnect</h2>
+<p>Open the <strong>Printer</strong> page and click <strong>Disconnect</strong>. Closing the app also disconnects the printer.</p>
+
+<h2>Connection problems</h2>
+<ul>
+<li>"Bluetooth is not available on this computer": turn on Bluetooth in the system settings. On macOS, give the app Bluetooth access.</li>
+<li>"No printers found yet": turn the printer off and on, and close the phone app.</li>
+<li>"The printer service was not found": the selected device is not a NIIMBOT printer, or it uses a different command set.</li>
+<li>"The printer did not accept the data": disconnect the printer and connect it again.</li>
+</ul>
+<p>See <a href="/wiki/troubleshooting/">Troubleshooting</a> for more.</p>

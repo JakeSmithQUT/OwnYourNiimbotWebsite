@@ -1,0 +1,37 @@
+---
+title: Install on macOS
+description: Install OwnYourNiimbot on a Mac with Apple silicon or an Intel processor, open an app that is not code signed, and allow Bluetooth access.
+section: Install and set up
+order: 2
+---
+<p class="lead">OwnYourNiimbot has a disk image for Macs with Apple silicon (M-series chips) and one for Macs with an Intel processor.</p>
+
+<h2>Install the app</h2>
+<ol class="steps">
+<li>Download the disk image for your Mac: <a href="{%dl macos-arm64%}">Apple silicon</a> ({%size macos-arm64%}) or <a href="{%dl macos-x64%}">Intel</a> ({%size macos-x64%}). To find the chip, open the Apple menu and click <strong>About This Mac</strong>.</li>
+<li>Open the disk image and drag OwnYourNiimbot to the <strong>Applications</strong> folder.</li>
+<li>In Applications, right-click OwnYourNiimbot and click <strong>Open</strong>, then click <strong>Open</strong> in the message.</li>
+<li>When the app asks for Bluetooth access, click <strong>Allow</strong>. The app needs it to find the printer.</li>
+</ol>
+
+<h2>Open the app the first time</h2>
+<p>The app is not signed with an Apple developer certificate, so macOS blocks it the first time.</p>
+<ul>
+<li>On macOS 15 and later, the right-click <strong>Open</strong> step can show the message again. Open <strong>System Settings</strong>, <strong>Privacy &amp; Security</strong>, scroll to the message about OwnYourNiimbot and click <strong>Open Anyway</strong>.</li>
+<li>If macOS says that the app is damaged and cannot be opened, remove the quarantine flag in Terminal, then open the app again:</li>
+</ul>
+<pre><code>xattr -dr com.apple.quarantine /Applications/OwnYourNiimbot.app</code></pre>
+<p>Download the app only from this site or from the <a href="{%releases-url%}" rel="noopener">GitHub releases page</a>. To check the file, compare its checksum with the value on the <a href="/download/#macos">download page</a>:</p>
+<pre><code>shasum -a 256 ~/Downloads/{%file macos-arm64%}</code></pre>
+
+<h2>Bluetooth access</h2>
+<p>If you clicked <strong>Don't Allow</strong>, the app cannot find printers. Open <strong>System Settings</strong>, <strong>Privacy &amp; Security</strong>, <strong>Bluetooth</strong>, and turn on OwnYourNiimbot. Then restart the app.</p>
+
+<h2>Updates</h2>
+<p>On macOS the app checks for a new version when it starts and every 6 hours. When a new version is available, a bar links to the release page. Download the new disk image and replace the app in Applications. See <a href="/wiki/updates/">Updates</a>.</p>
+
+<h2>Remove the app</h2>
+<p>Drag OwnYourNiimbot from Applications to the Bin. Labels and settings are in <code>~/Library/Application Support/OwnYourNiimbot</code>. Delete that folder too if you do not want to keep them.</p>
+
+<h2>Next step</h2>
+<p><a href="/wiki/connect-a-printer/">Connect a printer</a>.</p>

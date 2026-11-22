@@ -1,0 +1,47 @@
+---
+title: Print dialog
+description: The OwnYourNiimbot print dialog: the preview at printer resolution, copies, print density, label type, data rows, command set and saving a label as PNG.
+section: Printing
+order: 1
+---
+<p class="lead">Click <strong>Print</strong> or press <kbd>Ctrl</kbd> + <kbd>P</kbd> to open the print dialog. It shows the label as the printer receives it and the settings for the print job.</p>
+
+{%figure print-dialog | The print dialog with the label preview on the left and the printer model, copies, density and label type on the right.%}
+
+<h2>Preview</h2>
+<p>The preview shows the label at the printer resolution, for example "Preview at 203 dpi, as the printer receives it". Parts outside the print area are grey and do not print. For a batch, the arrows under the preview step through the labels: "Label 3 of 40".</p>
+
+<h2>Print settings</h2>
+<div class="table-wrap"><table>
+<thead><tr><th>Setting</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td>Printer model</td><td>Shows the connected printer. With no printer connected, select the model to see the preview at its resolution</td></tr>
+<tr><td>Copies of each label</td><td>The number of copies of each label</td></tr>
+<tr><td>Print density</td><td>How dark the printer prints. The range and the default depend on the model, for example 1 to 5 with 3 as the default</td></tr>
+<tr><td>Label type</td><td>Gap (die-cut), black mark, continuous and the other types that the model supports. It must match the roll</td></tr>
+<tr><td>Data rows</td><td>With data loaded: the first (<strong>From</strong>) and the last (<strong>To</strong>) row to print</td></tr>
+<tr><td>Number of serial labels</td><td>With a serial number on the label: how many numbered labels to print</td></tr>
+</tbody>
+</table></div>
+
+<h2>Advanced settings</h2>
+<p>Click <strong>Advanced</strong> to show:</p>
+<ul>
+<li><strong>Command set</strong>: <strong>Auto</strong> uses the command set for the model, for example "Auto uses Modern (B1 and newer) for the B1". Change it only if the printer does not print with the automatic choice.</li>
+<li><strong>Turn the print 180°</strong>: prints the label turned by 180°. <strong>Settings</strong>, <strong>Turn every print 180°</strong> does the same for every print job.</li>
+</ul>
+
+<h2>Warnings</h2>
+<ul>
+<li>"The printer has W × H mm labels loaded. This label is W × H mm.": the label size does not match the roll in the printer. Change the label size or the roll.</li>
+<li>"No data column for: Name": the label has a field with no matching column in the loaded data.</li>
+<li>"One print job can have up to 10,000 labels": print fewer copies, or print the data in parts with From and To.</li>
+<li>"The B3 uses a different command set (zicox)": the model does not use the NIIMBOT command set and the app cannot print to it. See <a href="/printers/">Supported printers</a>.</li>
+</ul>
+
+<h2>Print</h2>
+<p>Click <strong>Print N labels</strong>. The dialog shows the progress: preparing the printer, sending and printing each label, then finishing. If the printer reports a problem, for example "The cover is open" or "No labels are loaded", the dialog shows it. Fix the problem and print again.</p>
+<p>Each print job is saved in the <a href="/wiki/print-history/">print history</a>.</p>
+
+<h2>Save as PNG</h2>
+<p>Click <strong>Save as PNG</strong> to save the preview as an image at the printer resolution. You do not need a printer for this.</p>
