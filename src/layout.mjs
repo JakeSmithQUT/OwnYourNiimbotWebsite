@@ -33,7 +33,7 @@ ${robots}<link rel="canonical" href="${escapeAttr(url)}">
 <meta property="og:image" content="${SITE.url}/assets/img/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The OwnYourNiimbot label editor with a service record label">
+<meta property="og:image:alt" content="The OwnYourNiimbot label editor with a server label and a QR code">
 <meta property="og:locale" content="en_AU">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
